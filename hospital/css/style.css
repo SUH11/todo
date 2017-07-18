@@ -1,0 +1,155 @@
+
+@media screen and (min-width:240px){html {font-size:0.625rem;}}
+@media screen and (min-width:320px) and (max-width:400px){html {font-size:0.75rem;-webkit-text-size-adjust:none;}}
+@media screen and (min-width:400px) {html {font-size:0.75rem;}}
+@media screen and (min-width:480px) {html {font-size:0.875rem;}}
+@media screen and (min-width:560px) {html {font-size:1rem;}}
+@media screen and (min-width:600px) {html {font-size:1.125rem;}}
+
+/* css reset*/
+body,ul,h3,h2,h4,h5 { margin:0; }
+ul { padding:0; }
+li { list-style:none; }
+input { outline:none; }
+i, address { font-style:normal; }
+a { text-decoration:none; }
+img { vertical-align:middle; }
+body { background:#ededed; font-family:'微软雅黑';  }
+.clear:after { content:''; display:block; clear:both; }
+.clear { zoom:1; }
+/* css reset end*/
+
+.header { max-width:640px; width:100%; margin:0 auto; }
+.header a { display:block; }
+.header img { width:100%; }
+
+.wrap { max-width:640px; width:100%; padding:2%; margin:0 auto 10px; box-sizing:border-box; background:#fff; border-bottom:1px solid #ddd;}
+#search nav { display:flex; justify-content:space-around; }
+#search nav a { color:#000; text-align:center; display:inline-block; width:4rem; }
+#search nav img { width:3rem; }
+
+.text { width:100%; margin:1.5rem 0 .5rem; box-sizing:border-box; }
+.text input	{ width:70%; color:#ccc; border:1px solid #ebebeb; font-size:1rem; padding-left:.4rem;  height:2rem; box-sizing:border-box; }
+.text a { display:inline-block; width:30%;}
+.text img { width:100%; height:2rem; }
+
+/* 代码复用*/
+.title_question { font-weight:normal; margin-top: 1rem; text-align:center; background:#f47c2a;  padding:.4rem 0; border-radius:6px; }
+.title_question a { color:#fff; }
+.wrap_content { width:100%; padding:2.5%; box-sizing:border-box;  }
+ a.touch { display:block; width:100%; }
+ .touch img{ width:100%; margin-top:10px; }
+/* 代码复用 end*/
+
+.disease,.introduction,.article { padding:0; }
+.disease .top_title h3 b { border-bottom:3px solid #6b4612; }
+.top_title { background:url(../images/div_bottom_bg.gif) repeat-x bottom left; background-size:3px 1px; }
+.top_title h3 { color:#6b4612; box-sizing:border-box;  }
+.top_title h3 b{ padding:.7rem .6rem .7rem 1rem; font-size:1.3rem; display:inline-block; border-bottom:1px solid #6b4612; }
+.top_title h3 span{ padding-left:.6rem; border-left:3px solid #6b4612; }
+
+.top_title h3 small { color:#dedede; text-transform:uppercase; }
+.disease ul { display:flex; justify-content:space-around; }
+.disease ul li { padding:2.5rem 0; text-align:center; color:#fff; font-size:2rem; border-radius:6px; margin:.3rem; background:#d69942; font-weight:bolder; flex-grow:1; }
+.doctor h2 { margin-bottom:1rem; background:#6b4612; color:#d69942; text-align:center; padding:.5rem 0; font-size:1.8rem; font-weight:bold;}
+.doctor b { color:#fff; }
+
+
+#expert{ padding-bottom:1rem; }
+#expert img { display:inline-block; width:35%; vertical-align:top; }
+.expert_detail { display:inline-block; width:58%; vertical-align:top; padding-left:5%;  } 
+.expert_detail  small{ color:#666; font-size:.8rem; }
+.expert_detail h3 { padding:.2rem 0 .2rem 1.5rem; border-bottom:1px solid #d7d7d7; font-size:1.5rem; background:url(../images/honor_icon.gif) no-repeat left center; }
+.expert_detail ul li { color:#ba0000; padding-left:1.5rem; background:url(../images/star_icon.gif) no-repeat .3rem .3rem; line-height:1.8; background-size:1rem; }
+.expert_detail ul { margin:10px 0; }
+
+.expert_detail a { display:inline-block; padding:.3rem 5% .3rem 13%; background:url(../images/phone_icon.png) no-repeat .7rem center,#6b4612; background-size:1.5em; color:#fff; border-radius:4px;  }
+.expert_detail a:nth-of-type(2) { background:url(../images/guahao_icon.png) no-repeat .8rem center,#d69942; background-size:1.2em; color:#fff; margin-left:.5rem; border-radius:4px;  }
+#expert .title_question { width:70%; margin:1rem auto .5rem; }
+
+#scroll_msg_wrap { height:171px; position:relative; overflow:hidden; }
+.scroll_msg { width:80%; margin:0 auto; position:relative; top:0; left:0;}
+.scroll_msg li { border-bottom:1px dashed #e2e2e2; line-height:1.5; padding:.5rem 0; color:#333; }
+.scroll_msg span,.scroll_msg time { display:inline-block; width:32%; text-align:center; color:#333;  }
+.scroll_msg b{ width:16%; color:#333;  }
+.scroll_msg time { width:22%; }
+.scroll_msg span:nth-of-type(2) { width:29%; color:#e00000; }
+
+#expert .touch img{ width:100%; }
+
+.his_show { width:52%; float:left;  }
+.his_show img { width:100%; }
+
+.introdu_text { float:right; width:48%; padding-left:.3rem; box-sizing:border-box; }
+.introdu_text p { margin:0; text-indent:2em; line-height:1.5; }
+.introdu_text li { padding:.2rem 1rem; background:url(../images/his_li_bg.gif) no-repeat left center; color:#6b4612; font-size:1.2rem; }
+
+.article ul { margin-bottom:1rem; }
+.article ul a { color:#333; }
+.article ul li { padding:.5rem; font-size:1.2rem; border-bottom:1px dashed #dcdcdc; }
+
+#footer { padding:3rem 2% 5.5rem; background:url(../images/footer_bg.jpg) no-repeat; background-size:cover; }
+#footer p { margin:.5rem 0; color:#efd3a7; }
+#footer address { width:70%; float:left; }
+#footer div { width:30%; float:right; }
+#footer img { display:block;  width:100%; }
+
+#bottom { max-width:640px;  position:fixed; bottom:0; z-index:1000; width:100%; height:70px; }
+#bottom a { color:#fff; display:block; float:left; width:33.3333%; height:70px; font-size:1.2rem; text-align:center; }
+#bottom a span{ display:block; }
+.call  {}
+#bottom a.call { background:#371a08; height:60px; line-height:1.5; padding-top:10px;}
+.question_online { background:#de7d00; }
+.home { background:#de7d00; }
+.question_online,
+.home { background-position:15% center; background-repeat:no-repeat; line-height:70px;}
+#bottom a img { width:1rem; }
+
+
+#list_text .top_title a { color:#6b4612; font-size:1.2rem; }
+#list_text .top_title h3 { border-bottom:2px solid #6b4612;}
+
+
+#list_text .top_title h3 b { border-bottom:none; }
+.list { margin-bottom:1rem; }
+.list a { margin-right:.5rem; display:inline-block; padding:.2rem .4rem; border:1px solid #d7d7d7; color:#333; }
+
+#list_text {  }
+#list_text h4 { margin:1rem 0; background:#6b4612; color:#fff; padding:.5rem 0; text-align:center; font-size:1.5rem; }
+.question_list { display:flex; justify-content:space-around; }
+.question_list a {  color:#3d3d3d; display:block; border:1px solid #d9d9d9; padding:.4rem 1rem; border-radius:4px; text-decoration:underline; }
+.question_list a:hover { text-decoration:none; }
+
+.article article {  }
+.article article h3 { padding-bottom:.5rem; border-bottom:1px dashed #cdcdcd; text-align:center; line-height:1.5; }
+.article article h3 a { color:#6b4612; font-size:1.3rem;}
+.article article h3 small a { font-size:1rem; color:#666; }
+.article article small { display:block; color:#666;}
+.article article p { font-weight:bold; text-indent:2em; line-height:1.5; }
+
+.question { display:block; text-align:center; margin:0 auto 1rem; color:#ff0000; font-weight:bold; font-size:1.6rem; }
+.myTips { padding:.8rem 1rem; background:#e6b485; }
+.myTips p { margin:0; line-height:1.5; }
+.myTips i { color:#ff0000; }
+.myTips a { color:#6f1800; }
+
+.type { margin-top:10px; }
+.type h3 { font-weight:normal; color:#fff; text-align:center; background:#bc8331; font-size:1.8rem; padding:.8rem; }
+.type h3 small { display:block; color:#6b4612;font-size:1.2rem; }
+.type ul li div { float:left; }
+.type ul li { padding:1.3rem 0; border-bottom:1px dashed #f47c2a; }
+.type ul li div:nth-of-type(1) { width:36%; box-sizing:border-box; }
+.type ul li div:nth-of-type(2) { width:60%; margin-left:3%; }
+.type ul li div img { width:100%; border:1px solid #bc8331;}
+.type p { margin:0; color:#666; line-height:1.5; }
+.type h5 { color:#f47c2a; font-size:1.2rem; margin-bottom:.5rem; }
+.type h3.title_question,.cure h3.title_question { width:70%; margin:.8rem auto .2rem; background:#f39801; font-size:1.2rem; padding:.4rem 0; }
+
+
+.cure { background:url(../images/disease_bg.jpg) no-repeat bottom left,#f5deb8; background-size:contain; }
+.cure .cure_title { font-weight:normal; margin-bottom:.8rem; background:#bc8331; color:#fff; text-align:center; padding:.8rem 0; font-size:1.8rem; }
+.cure p { text-indent:2em; color:#6b4612; margin:.5rem 0; line-height:1.6; }
+.cure .cure_title b { color:#6b4612; }
+.cure a { display:block; margin:.8rem auto 0; width:70%; }
+.cure a img { width:100%;  }
+.cure h3.title_question a { margin:0 auto; }

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3.0, user-scalable=0">
+	<script>
+		window.onload = function() {
+
+
+			// 底部固定
+			var oBottom = document.getElementById('bottom');
+			var iWidth = document.documentElement.clientWidth;
+
+			oBottom.style.left = (iWidth - oBottom.clientWidth)/2 + 'px';
+
+			
+			// 无缝滚动
+			var scroll_msg = document.getElementById('scroll_msg');
+			scroll_msg.innerHTML += scroll_msg.innerHTML;
+
+			var iH = parseInt(getStyle(scroll_msg, 'height'));
+			function fnScroll() {
+				var iCur = parseInt(getStyle(scroll_msg, 'top'));
+				var iSpeed = -1;
+				if ( Math.abs(iCur) >= iH/2 ) {
+					scroll_msg.style.top = iSpeed + 'px';
+				} else {
+					scroll_msg.style.top = iCur + iSpeed + 'px';
+				}
+			}
+
+			var timer =  setInterval(function() {
+				fnScroll();
+			}, 60);
+
+
+			function getStyle(obj, attr){
+				return obj.currentStyle ? obj.currentStyle[attr] : getComputedStyle(obj, false)[attr];
+			}
+		}
+	</script>
+</head>
+<body>
+	<div id="banner" class="header">
+		<a href="#"><img src="images/banner_disease3.jpg"></a>
+	</div>
+	<div id="call_banner" class="header">
+		<a href="#"><img src="images/call_banner1.gif"></a>
+	</div>
+
+	<div class="type wrap">
+		<h3><small>【根据发病愿意不同】</small>心脏偷停的三大分类</h3>
+		<ul>
+			<li class="clear">
+				<div>
+					<img src="images/disease3_img1.gif">
+				</div>
+				<div>
+					<h5>类型一：气血瘀阻型</h5>
+					<p>多因七情六欲，生气着急，劳心伤神导致心脏气血淤滞而发病。采用中医调理治病求本，疏通气血，滋养心脉，调律安心，临床取得了良好效果。</p>
+				</div>
+			</li>
+			<li class="clear">
+				<div>
+					<img src="images/disease3_img2.gif">
+				</div>
+				<div>
+					<h5>类型二：劳累受损型</h5>
+					<p>此类型多因劳累过度或体质虚弱或寒邪犯心导致心肌受损，心脉失养，心功失常而发病。治疗上采用中医调理壮心补气，通脉宁心，调脉定悸，治疗房颤、早搏等心律失常，获得了很好的疗效。</p>
+				</div>
+			</li>
+			<li class="clear">
+				<div>
+					<img src="images/disease3_img3.gif">
+				</div>
+				<div>
+					<h5>类型三：阳气亏虚型</h5>
+					<p>此类型心脏扩大导致传导受损，心律失常，采用中医调理再生缩小心脏，恢复心脏正常传导，使心律正常。</p>
+				</div>
+			</li>
+		</ul>
+		<h3 class="title_question"><a href="#">我有以上症状，点击咨询专家</a></h3>
+	</div>
+
+	<div class="cure wrap">
+		<h3 class="cure_title">心脏偷停的中医治疗</h3>
+		<p>人的心脏正常跳动原理：在心脏的右心房上部有一个生物发电厂——称为窦房结，窦房结不受人的思想意识支配而产生一股股节律性电流，该股电流从窦房结传至房室结及房室束等传导系统并瞬间传遍心脏，刺激心脏肌肉收缩而形成心脏规律性跳动。</p>
+		<p>西医认为，心脏偷停发病原因主要有两种；一是传导系统变性老化阻断，导致心脏不能按正常节律跳动，二是心脏房室扩大，使正常传导系统因房室扩大而使传导系统受到牵拉断裂、破损，而导致心脏节律不能正常跳动。</p>
+		<p>采用中医调理，疏通气血，滋养心脉，调律安心、壮心补气，通脉宁心，调脉定悸，恢复心脏正常传导，使心律正常。</p>
+		<h3 class="title_question"><a href="#">点击咨询详细治疗方法</a></h3>
+	</div>
+
+	<div id="expert" class="doctor wrap clear">
+		<h2>看中医治心脏病就找 <b> 刘军卫</b></h2>
+		<img src="images/doctor_img.gif">
+		<div class="expert_detail">
+			<h3>刘军卫	<small>中医科主任</small></h3>
+			<ul class="honor">
+				<li>七代祖传中医</li>
+				<li>中西医结合执业医师</li>
+				<li>传统医学委员会会员</li>
+			</ul>
+			<a href="#">电话问诊</a>
+			<a href="#">限号预约</a>
+		</div>
+		<h3 class="title_question"><a href="#">网上预约就诊大厅 每日预约限号20</a></h3>
+
+		<div id="scroll_msg_wrap">
+			<ul class="scroll_msg" id="scroll_msg">
+				<li>
+					<b>冯女士</b>
+					<time>10分钟前</time>
+					<span>冠心病</span>
+					<span>预约已经成功</span>
+				</li>
+				<li>
+					<b>刘女士</b>
+					<time>5分钟前</time>
+					<span>扩张性心肌病</span>
+					<span>预约已经成功</span>
+				</li>
+				<li>
+					<b>张先生</b>
+					<time>5分钟前</time>
+					<span>冠心病</span>
+					<span>预约已经成功</span>
+				</li>
+				<li>
+					<b>王女士</b>
+					<time>16分钟前</time>
+					<span>心脏偷停</span>
+					<span>预约已经成功</span>
+				</li>
+				<li>
+					<b>刘女士</b>
+					<time>16分钟前</time>
+					<span>冠心病</span>
+					<span>预约已经成功</span>
+				</li>
+			</ul>
+		</div>
+		
+		<a href="#" class="touch"><img src="images/ad.jpg"></a>
+	</div>
+
+
+
+	<div class="article wrap">
+		<div class="top_title">
+			<h3><b><span>推荐文章</span></b> <small>Hospital profile</small></h3>
+		</div>
+		<div class="wrap_content">
+			<ul>
+				<li>
+					<a href="#">治疗阴茎硬结技术--中医消融疗法</a>
+				</li>
+				<li>
+					<a href="#">专家解析阴茎痰核（阴茎海绵体硬结症）</a>
+				</li>
+				<li>
+					<a href="#">中医治疗阴茎结症，效果显著</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<div id="footer" class="wrap clear">
+		<address>
+			<p>医院地址 : 长春市经济技术开发区北海路490号</p>
+			<p>咨询电话 : 0431-8711283或15843127258</p>
+			<p>微信咨询 : 15843127258</p>
+			<p>QQ咨询 : 371093663</p>
+		</address>
+		<div>
+			<img src="images/wechat_link.gif">
+		</div>
+	</div>
+	<div id="bottom">
+		<a href="#" class="home"><img src="images/home_icon.png"> 网站首页</a>
+		<a href="#" class="call"><img src="images/phone_bottom_icon.png"> 一键通话<br/>0431-81802233</a>
+		<a href="#" class="question_online"><img src="images/wechat_icon.png"> 在线咨询</a>
+	</div>
+</body>
+</html>

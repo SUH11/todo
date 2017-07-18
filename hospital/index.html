@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3.0, user-scalable=0">
+	<script>
+		window.onload = function() {
+
+
+			// 底部固定
+			var oBottom = document.getElementById('bottom');
+			var iWidth = document.documentElement.clientWidth;
+
+			oBottom.style.left = (iWidth - oBottom.clientWidth)/2 + 'px';
+
+			
+			// 无缝滚动
+			var scroll_msg = document.getElementById('scroll_msg');
+			scroll_msg.innerHTML += scroll_msg.innerHTML;
+
+			var iH = parseInt(getStyle(scroll_msg, 'height'));
+			function fnScroll() {
+				var iCur = parseInt(getStyle(scroll_msg, 'top'));
+				var iSpeed = -1;
+				if ( Math.abs(iCur) >= iH/2 ) {
+					scroll_msg.style.top = iSpeed + 'px';
+				} else {
+					scroll_msg.style.top = iCur + iSpeed + 'px';
+				}
+			}
+
+			var timer =  setInterval(function() {
+				fnScroll();
+			}, 60);
+
+
+			function getStyle(obj, attr){
+				return obj.currentStyle ? obj.currentStyle[attr] : getComputedStyle(obj, false)[attr];
+			}
+		}
+	</script>
+</head>
+<body>
+	<div id="banner" class="header">
+		<a href="#"><img src="images/banner.jpg"></a>
+	</div>
+	<div id="call_banner" class="header">
+		<a href="#"><img src="images/call_banner.gif"></a>
+	</div>
+	<div id="search" class="wrap">
+		<nav>
+			<a href="#">
+				<img src="images/home_icon.gif">
+				医院首页
+			</a>
+			<a href="#">
+				<img src="images/his_detail.gif">
+				医院概况
+			</a>
+			<a href="#">
+				<img src="images/docter_icon.gif">
+				资深中医
+			</a>
+			<a href="#">
+				<img src="images/road_icon.gif">
+				来院路线
+			</a>
+		</nav>
+		<div class="text">
+			<input type="text" name="" placeholder="请输入您要咨询的问题"><a href="#">
+				<img src="images/search_icon.gif">
+			</a>
+		</div>
+	</div>
+	<div class="disease wrap">
+		<div class="top_title">
+			<h3><b><span>心脏疾病</span></b> <small>Heart disease</small></h3>
+		</div>
+		<div class="wrap_content">
+			<ul>
+				<li><a href="d1.html" style="color:#fff;">冠心病</a></li>
+				<li><a href="d2.html" style="color:#fff;">心肌病</a></li>
+				<li><a href="d3.html" style="color:#fff;">心脏偷停</a></li>
+			</ul>
+			<h3 class="title_question"><a href="#">点击咨询在线专家</a></h3>
+		</div>
+	</div>
+
+	<div id="expert" class="doctor wrap clear">
+		<h2>看中医治心脏病就找 <b> 刘军卫</b></h2>
+		<img src="images/doctor_img.gif">
+		<div class="expert_detail">
+			<h3>刘军卫	<small>中医科主任</small></h3>
+			<ul class="honor">
+				<li>七代祖传中医</li>
+				<li>中西医结合执业医师</li>
+				<li>传统医学委员会会员</li>
+			</ul>
+			<a href="#">电话问诊</a>
+			<a href="#">限号预约</a>
+		</div>
+		<h3 class="title_question"><a href="#">网上预约就诊大厅 每日预约限号20</a></h3>
+
+		<div id="scroll_msg_wrap">
+			<ul class="scroll_msg" id="scroll_msg">
+				<li>
+					<b>冯女士</b>
+					<time>10分钟前</time>
+					<span>冠心病</span>
+					<span>预约已经成功</span>
+				</li>
+				<li>
+					<b>刘女士</b>
+					<time>5分钟前</time>
+					<span>扩张性心肌病</span>
+					<span>预约已经成功</span>
+				</li>
+				<li>
+					<b>张先生</b>
+					<time>5分钟前</time>
+					<span>冠心病</span>
+					<span>预约已经成功</span>
+				</li>
+				<li>
+					<b>王女士</b>
+					<time>16分钟前</time>
+					<span>心脏偷停</span>
+					<span>预约已经成功</span>
+				</li>
+				<li>
+					<b>刘女士</b>
+					<time>16分钟前</time>
+					<span>冠心病</span>
+					<span>预约已经成功</span>
+				</li>
+			</ul>
+		</div>
+		
+		<a href="#" class="touch"><img src="images/ad.jpg"></a>
+	</div>
+
+	<div class="introduction wrap">
+		<div class="top_title">
+			<h3><b><span>医院简介</span></b> <small>Hospital profile</small></h3>
+		</div>
+		<div class="wrap_content">
+			<div class="introdu_detail clear">
+				<div class="his_show">
+					<img src="images/his_img.gif">
+				</div>
+				<div class="introdu_text">
+					<ul>
+						<li>公立甲等医院</li>
+						<li>非营利性医院</li>
+						<li>百姓口碑医院</li>
+					</ul>
+					<p>长春经济开发区中心医院位于经开区北海路490号,是国家批准成立集医疗、预防、教学、科研、保健为一体.</p>
+				</div>
+			</div>
+			<a href="#" class="touch"><img src="images/safe_tip.jpg"></a>
+		</div>
+	</div>
+
+	<div class="article wrap">
+		<div class="top_title">
+			<h3><b><span>推荐文章</span></b> <small>Hospital profile</small></h3>
+		</div>
+		<div class="wrap_content">
+			<ul>
+				<li>
+					<a href="#">治疗阴茎硬结技术--中医消融疗法</a>
+				</li>
+				<li>
+					<a href="#">专家解析阴茎痰核（阴茎海绵体硬结症）</a>
+				</li>
+				<li>
+					<a href="#">中医治疗阴茎结症，效果显著</a>
+				</li>
+				<li>
+					<a href="#">阴茎硬结症的非手术治疗</a>
+				</li>
+				<li>
+					<a href="#">阴茎硬结的早期症状是什么？</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<div id="footer" class="wrap clear">
+		<address>
+			<p>医院地址 : 长春市经济技术开发区北海路490号</p>
+			<p>咨询电话 : 0431-8711283或15843127258</p>
+			<p>微信咨询 : 15843127258</p>
+			<p>QQ咨询 : 371093663</p>
+		</address>
+		<div>
+			<img src="images/wechat_link.gif">
+		</div>
+	</div>
+	<div id="bottom">
+		<a href="#" class="home"><img src="images/home_icon.png"> 网站首页</a>
+		<a href="#" class="call"><img src="images/phone_bottom_icon.png"> 一键通话<br/>0431-81802233</a>
+		<a href="#" class="question_online"><img src="images/wechat_icon.png"> 在线咨询</a>
+	</div>
+</body>
+</html>

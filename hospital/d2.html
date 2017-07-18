@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3.0, user-scalable=0">
+	<script>
+		window.onload = function() {
+
+
+			// 底部固定
+			var oBottom = document.getElementById('bottom');
+			var iWidth = document.documentElement.clientWidth;
+
+			oBottom.style.left = (iWidth - oBottom.clientWidth)/2 + 'px';
+
+			
+			// 无缝滚动
+			var scroll_msg = document.getElementById('scroll_msg');
+			scroll_msg.innerHTML += scroll_msg.innerHTML;
+
+			var iH = parseInt(getStyle(scroll_msg, 'height'));
+			function fnScroll() {
+				var iCur = parseInt(getStyle(scroll_msg, 'top'));
+				var iSpeed = -1;
+				if ( Math.abs(iCur) >= iH/2 ) {
+					scroll_msg.style.top = iSpeed + 'px';
+				} else {
+					scroll_msg.style.top = iCur + iSpeed + 'px';
+				}
+			}
+
+			var timer =  setInterval(function() {
+				fnScroll();
+			}, 60);
+
+
+			function getStyle(obj, attr){
+				return obj.currentStyle ? obj.currentStyle[attr] : getComputedStyle(obj, false)[attr];
+			}
+		}
+	</script>
+</head>
+<body>
+	<div id="banner" class="header">
+		<a href="#"><img src="images/banner_disease2.jpg"></a>
+	</div>
+	<div id="call_banner" class="header">
+		<a href="#"><img src="images/call_banner1.gif"></a>
+	</div>
+
+	<div class="type wrap">
+		<h3><small>【根据发病部位不同】</small>心肌病的三大分类</h3>
+		<ul>
+			<li class="clear">
+				<div>
+					<img src="images/disease2_img1.gif">
+				</div>
+				<div>
+					<h5>类型一：扩张型心肌病</h5>
+					<p>发病原因主要是素体虚弱、操劳过度、起居失常造成气血亏虚、损耗心气、心气大虚而成扩心病。用中医调理：壮心补气、健脾化湿，许多患者达到了临床治愈，为扩心病患者开创了中医新疗法。</p>
+				</div>
+			</li>
+			<li class="clear">
+				<div>
+					<img src="images/disease2_img2.gif">
+				</div>
+				<div>
+					<h5>类型二：肥厚型心肌病</h5>
+					<p>原因为先天不足、怒气伤肝、气滞血瘀、饮食不节、气血失调、邪毒内侵所造成心血瘀滞，心脏肌肉增厚，造成肥厚型心肌病。用中医调理：活血通脉、散滞化结的治疗法则，治愈了很多肥厚型心肌病。</p>
+				</div>
+			</li>
+			<li class="clear">
+				<div>
+					<img src="images/disease2_img3.gif">
+				</div>
+				<div>
+					<h5>类型三：限制型心肌病</h5>
+					<p>原因主要是禀赋不足、寒邪内侵、寒凝气滞造成心肌血管经络淤阻，血液不能畅通，造成心肌脉络失养，心脏缩小僵化。用中调理：法温阳散寒、壮心活血的治疗法则，临床方面取得了显著效果。</p>
+				</div>
+			</li>
+		</ul>
+		<h3 class="title_question"><a href="#">我有以上类型心肌病，点击咨询专家</a></h3>
+	</div>
+
+	<div class="cure wrap">
+		<h3 class="cure_title">心肌病的中医治疗</h3>
+		<p>无论哪种类型的心肌病，它的根本发病原因就是心脏血脉肌肉受到各种致病因素因子的伤害，导致心肌细胞损害、空泡变性、肥大畸形、衰竭凋亡、心肌纤维化、淀粉样变性，从而使心脏扩大或缩小或肥厚等，发为心肌病。</p>
+		<p>经过中医调理，使心脏心肌细胞再造重生、恢复机能，滋养强壮心肌细胞，使空泡变性，肥大畸形、功能衰弱的心肌细胞修复转化为正常的心肌细胞，达到根治心肌病目的。</p>
+		<p>扩张型心肌病患者经过治疗，多数患者能使扩大的心房或心室缩小3-10mm，多数肥厚型心肌病患者治疗后室间隔及左室后壁变薄3-7mm。连续治疗直到心脏指标恢复正常后，再减量巩固治疗2-3年，一般患者不再复发。</p>
+		<h3 class="title_question"><a href="#">点击咨询详细治疗方法</a></h3>
+	</div>
+
+	<div id="expert" class="doctor wrap clear">
+		<h2>看中医治心脏病就找 <b> 刘军卫</b></h2>
+		<img src="images/doctor_img.gif">
+		<div class="expert_detail">
+			<h3>刘军卫	<small>中医科主任</small></h3>
+			<ul class="honor">
+				<li>七代祖传中医</li>
+				<li>中西医结合执业医师</li>
+				<li>传统医学委员会会员</li>
+			</ul>
+			<a href="#">电话问诊</a>
+			<a href="#">限号预约</a>
+		</div>
+		<h3 class="title_question"><a href="#">网上预约就诊大厅 每日预约限号20</a></h3>
+
+		<div id="scroll_msg_wrap">
+			<ul class="scroll_msg" id="scroll_msg">
+				<li>
+					<b>冯女士</b>
+					<time>10分钟前</time>
+					<span>冠心病</span>
+					<span>预约已经成功</span>
+				</li>
+				<li>
+					<b>刘女士</b>
+					<time>5分钟前</time>
+					<span>扩张性心肌病</span>
+					<span>预约已经成功</span>
+				</li>
+				<li>
+					<b>张先生</b>
+					<time>5分钟前</time>
+					<span>冠心病</span>
+					<span>预约已经成功</span>
+				</li>
+				<li>
+					<b>王女士</b>
+					<time>16分钟前</time>
+					<span>心脏偷停</span>
+					<span>预约已经成功</span>
+				</li>
+				<li>
+					<b>刘女士</b>
+					<time>16分钟前</time>
+					<span>冠心病</span>
+					<span>预约已经成功</span>
+				</li>
+			</ul>
+		</div>
+		
+		<a href="#" class="touch"><img src="images/ad.jpg"></a>
+	</div>
+
+
+
+	<div class="article wrap">
+		<div class="top_title">
+			<h3><b><span>推荐文章</span></b> <small>Hospital profile</small></h3>
+		</div>
+		<div class="wrap_content">
+			<ul>
+				<li>
+					<a href="#">治疗阴茎硬结技术--中医消融疗法</a>
+				</li>
+				<li>
+					<a href="#">专家解析阴茎痰核（阴茎海绵体硬结症）</a>
+				</li>
+				<li>
+					<a href="#">中医治疗阴茎结症，效果显著</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<div id="footer" class="wrap clear">
+		<address>
+			<p>医院地址 : 长春市经济技术开发区北海路490号</p>
+			<p>咨询电话 : 0431-8711283或15843127258</p>
+			<p>微信咨询 : 15843127258</p>
+			<p>QQ咨询 : 371093663</p>
+		</address>
+		<div>
+			<img src="images/wechat_link.gif">
+		</div>
+	</div>
+	<div id="bottom">
+		<a href="#" class="home"><img src="images/home_icon.png"> 网站首页</a>
+		<a href="#" class="call"><img src="images/phone_bottom_icon.png"> 一键通话<br/>0431-81802233</a>
+		<a href="#" class="question_online"><img src="images/wechat_icon.png"> 在线咨询</a>
+	</div>
+</body>
+</html>
