@@ -1,0 +1,367 @@
+.wrap{
+	width: 100%;
+}
+.header{
+	width: 100%;
+}
+/*headTop开始*/
+.headTop{
+	/*height: 34px;*/
+	background: #000;
+	/*padding: 13px 24px 12px 26px;*/
+}
+.headMenu{
+	display: inline-block;
+	line-height: 60px;
+	float: left;
+	padding-left: 50px;
+	font-size: 14px;
+}
+.headMenu li{
+	width: 80px;
+	height: 60px;
+	float: left;
+	display: block;
+	text-align: center;
+	cursor: pointer;
+}
+.headMenu li:hover{
+	background: #363c41;
+}
+.headMenu li a {
+	color: #fff;
+}
+.headTop a.headLogo{
+	display: inline;
+	float: left;
+	margin: 13px  0 0 15px;
+}
+.headTop ul.headMessage{
+	float: right
+}
+/*未完成？？？？头像问题*/
+.headTop ul.headMessage li{
+	width: 56px;
+	height: 60px;
+	float: left;
+	display: block;
+	text-align: center;
+	line-height: 60px;
+}
+/*headTop结束*/
+.headBottom{
+	padding: 42px 122px 0 110px;
+	background: url(../img/headBottomBg.jpg) no-repeat;
+	background-size:100% 100%;
+}
+.uInfo{
+	width: 335px;
+	float: left;
+	color: #fff;
+	padding: 25px 0 0 40px;
+
+}
+.headBottom .uInfo a{
+	color: #fff;
+}
+.headBottom .uInfo p{
+	text-indent: 20px;
+	line-height: 20px;
+	font-size: 14px;
+	
+}
+p.pStudy{
+	background: url(../img/gsex.png) no-repeat left 5px;
+}
+.headBottom .uInfo p.uSet{
+	opacity: 0.5;
+	padding-top: 20px;
+
+}
+.uInfo .uName{
+	color: #fff;
+	font-size: 30px;
+}
+
+.uImgMess{
+	width: 200px;
+	float: left;
+}
+.uImgMess a{
+	display: block;
+	float: left;
+}
+.uImgMess img.uImg{
+	display: block;
+	border: 5px solid #3d4044;	
+	border-radius: 50%;
+}
+
+
+.hbright{
+	width: 100px;
+	height: 100px;
+	background: green;
+	color: #fff;
+	float: right;
+}
+/*headBottom结束*/
+
+.content{
+	/*height: 300px;*/
+	margin: 0 auto;
+	padding: 30px 0 0 130px;
+}
+.content .left{
+	width: 160px;
+	float: left;
+	margin-right: 60px;
+}
+.left li{
+	text-align: center;
+}
+.left a{
+	display: block;
+	height: 60px;
+	width: 160px;
+	line-height: 60px;
+	font-size: 16px;
+	position: relative;
+	color: #787d82;
+}
+.left a:hover{
+	color: #f01400;
+}
+.left a i{
+	display: inline-block;
+	height: 16px;
+	width: 16px;
+	position: absolute;
+	left: 23px;
+	top: 25px;
+}
+.left a.active i{
+	background: url(../img/indexBg1.png) no-repeat;
+}
+.left a.course i{
+	background: url(../img/courseBg.png) no-repeat;
+}
+.left a.exercise i{
+	background: url(../img/exerciseBg.png) no-repeat;
+}
+.left a.road i{
+	background: url(../img/roadBg.png) no-repeat;
+}
+.left a.question i{
+	background: url(../img/questionBg.png) no-repeat;
+}
+.left a.note i{
+	background: url(../img/noteBg.png) no-repeat;
+}
+.left a.wiki i{
+	background: url(../img/wikiBg.png) no-repeat;
+}
+.left a b{
+	display: inline-block;
+	height: 8px;
+	width: 5px;
+	background: url(../img/bBg.png) no-repeat;
+	position: absolute;
+	right: 8px;
+	top: 28px;
+}
+.left a.active b{
+	background: url(../img/indexBg2.png) no-repeat;
+}
+.left a.active{
+	color:  #f01400;
+	border-bottom: 1px solid #edf1f2;
+}
+.content .right{
+	width: 965px;
+	float: left;
+}
+.right p.rightTop{
+	color: #787d82;
+	padding-bottom: 22px;
+	border-bottom: 1px solid #cfd5d8;
+	font-size: 14px;
+}
+.right p.rightTop a{
+	display: inline-block;
+	float: right;
+	color: #787d82;
+}
+.right .course1{
+	padding-top: 31px;
+	border-bottom: 1px solid #cfd5d8;
+}
+.right .userImg{
+	display: inline-block;
+	float: left;
+}
+.userImg img{
+	border-radius: 50%;
+}
+.right .uCourse{
+	float: left;
+	padding-left: 23px;
+}
+.uCourse a{
+	font-size: 14px;
+	color: #4d555d;
+	font-weight: bold;
+	display: block;
+}
+.uCourse span{
+	line-height: 25px;
+	opacity: 0.5;
+
+}
+.write{
+	float: right;
+}
+.uCourse p{
+	padding-top: 10px;
+	font-size: 16px;
+	line-height: 30px;
+}
+.right .courseContent{
+	width: 900px;
+	float: right;
+	margin: 9px 0 30px 0;
+	background: #f2f4f6;
+}
+.courseImg{
+	display: inline-block;
+	float: left;
+}
+
+.questionContent{
+	width: 848px;
+	background: #f2f4f6;
+	margin: 9px 0 30px 0;
+	padding: 26px;
+	float: right;
+	color: #4d555d;
+}
+
+.questionIn{
+	display: inline-block;
+	vertical-align: top;
+	padding-left: 8px;
+	color: #4d555d;
+	width: 93%;
+}
+.questionIn a{
+	color: #4d555d;
+	padding-left: 14px;
+}
+.questionIn h3{
+	text-indent: -1em;
+	font-size: 18px;
+}
+.questionIn h3 a:hover{
+	color: #000;
+}
+.courseIn{
+	padding: 25px 15px 25px 25px;
+	float: left;
+	font-size: 14px;
+	background: #f2f4f6;
+	color: #787d82;
+	overflow: hidden;
+	width: 620px;
+}
+
+.courseIn span{
+	padding-right: 25px;
+	line-height: 28px;
+
+}
+.courseIn p a{
+	line-height: 30px;
+	font-size: 14px;
+	color: #787d82;
+}
+.courseIn a span{
+	float: right;
+}
+.courseIn .courseDetail{
+	padding: 10px 0;
+}
+.courseIn .courseTitle{
+	font-size: 18px;
+	color: #4e555c;
+	font-weight: bold;
+}
+a.courseTitle:hover{
+	color: #000;
+}
+.noteTitle {
+	font-size: 18px;
+	padding-bottom: 20px;
+}
+.noteTitle a{
+	color: #4e555c;
+}
+.noteTitle a:hover{
+	color: #000;
+}
+.noteQuestion{
+	display: block;
+	float: left;
+}
+span.noteContent{
+	width: 667px;
+	display: inline-block;
+	padding-left: 30px;
+	font-size: 14px;
+	line-height: 24px;
+}
+/*content结束*/
+
+/*footer开始*/
+.footer{
+	width: calc(100% - 228px);
+	background: #000;
+	float: left;
+	color: #fff;
+	padding: 30px 114px;
+}
+.foot{
+	width: 1222px;
+	margin: 0 auto;
+}
+.footLeft{
+	width: 691px;
+	float: left;
+}
+.footRight{
+	padding-right: 114px;
+	float: right;
+}
+.footList{
+	display: block;
+}
+.footLeft span{
+	display: block;
+	float: left;
+	padding-top: 8px;
+	opacity: 0.5;
+}
+.footList li{
+	float: left;
+	padding-right: 30px;
+	color: #fff;
+}
+.footList li a{
+	/*color: #fff;*/
+	color: #c8cdd2;
+}
+.footList li a:hover{
+	color: #fff;
+}
+.footRight a{
+	padding-right: 12px;
+}

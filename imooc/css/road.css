@@ -1,0 +1,50 @@
+.box{
+	width: 1200px;
+	margin: 0 auto 200px auto;
+}
+.roadPage{
+	background: #363741;
+}
+.box h3{
+	border-bottom: 1px solid #d0d6d9;
+    color: #010101;
+    font-size: 16px;
+    font-weight: 700;
+    height: 60px;
+    line-height: 60px;
+}
+.box ul.jobRoad li{
+	float: left;
+	background: #fff none repeat scroll 0 0;
+    border-radius: 0 0 1px 1px;
+    float: left;
+    margin:15px 18px 15px 0;
+    padding: 20px;
+    width: 240px;
+    color: #787d82;
+    border:1px solid #ccc;
+    cursor:pointer;
+}
+
+ul.jobRoad li h5{
+	color: #14191e;
+    font-weight: bold;
+    line-height: 18px;
+    text-align: left;
+    height: 50px;
+    line-height: 50px;
+    white-space: nowrap;
+    font-size: 14px;
+}
+ul.jobRoad li a{
+	color: #787d82;
+	padding:20px 0;
+	line-height: 30px;
+}
+
+ul.jobRoad li a span{
+	padding: 2px;
+	background-color: #edf1f2;
+	margin-right: 20px;
+
+}

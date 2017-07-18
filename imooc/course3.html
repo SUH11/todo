@@ -1,0 +1,378 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>慕课网-我的课程</title>
+	<link rel="stylesheet" type="text/css" href="css/message.css"/>
+	<link rel="stylesheet" type="text/css" href="css/course.css"/>
+	<link rel="shortcut icon" href="img/logo.ico" type="image/x-icon" />
+	<style type="text/css">
+		/* 默认样式重置开始 (css reset)  */
+		body,p,h1,h2,h3,h4,h5,h6,dl,dd{margin:0; font-size:12px;/* font-family:XX; */}
+		 ol,ul{list-style:none;padding:0;margin:0;}
+		 a{text-decoration:none;}
+		 img{border:none;vertical-align:center;}
+		 /* 默认样式重置结束 (css reset)  */
+		 .clear{zoom:1;}
+		 /*.clear{content:"";display: block;clear:both;}*/
+		 .clear{
+		 	overflow: hidden;
+		 }
+		 /*headBottom的背景*/
+		 /*.headBottom{
+		 	background-color: #4c4a45;
+		 	background-image: none;
+		 }*/
+	</style>
+
+</head>
+<body>
+	<!-- wrap 开始 -->
+	<div class="wrap">
+		<!-- header开始 -->
+		<div class="header">
+			<!-- headTop开始 -->
+			<div class="headTop clear">
+				<a href="#" class="headLogo">
+					<img src="img/logo.gif"/>
+				</a>
+				<ul class="headMenu">
+					<li>
+						<a href="index.html">首页</a>
+					</li>
+					<li>
+						<a href="#">实战</a>
+					</li>
+					<li>
+						<a href="road.html" target="_blank">路径</a>
+					</li>
+					<li>
+						<a href="#">猿问</a>
+					</li>
+					<li>
+						<a href="#">手记</a>
+					</li>
+				</ul>
+				<ul class="headMessage clear">
+					<li>
+						<a href="#">
+							<img src="img/1.png">
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="img/2.png">
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="img/3.png">
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="img/4.png">
+						</a>
+					</li>
+					<li>
+						<a href="#" style="margin-top: 10px;">
+							<img src="img/5.png">
+						</a>
+					</li>
+				</ul>
+			</div>
+			<!-- headTop结束 -->
+			<!-- headBottom开始 -->
+			<div class="headBottom headerBottom clear">
+				<div class="headContent clear">
+					<div class="headTitle">
+						<p>
+							<a href="#">课程</a>\<a href="#">前端开发</a>\<a href="#">Bootstrap</a>\<a href="#">Android-精通Activity</a>
+						</p>
+						<h3 id="test2">Android-精通Activity</h3>
+					</div>
+					<div class="headMess">
+						<ul class="messCourse">
+							<li>
+								<b>高级</b>
+								<span>难度</span>
+							</li>
+							<li>
+								<b>90分</b>
+								<span>时长</span>
+							</li>
+							<li>
+								<b>32083</b>
+								<span>学习人数</span>
+							</li>
+						</ul>
+					</div>
+					<div class="headShare">
+						<ul class="share">
+							<li>
+								<a href="#">关注</a>
+							</li>
+							<li>分享</li>
+							<!-- <li>
+								<a href="#">
+									<img src=""/>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<img src=""/>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<img src=""/>
+								</a>
+							</li> -->
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- headBottom结束 -->
+		</div>
+		<!-- header结束 -->
+		<!-- content开始 -->
+		<div class="content clear">
+			<!-- contentWrap开始 -->
+			<div class="contentWrap">
+				<!-- left开始 -->
+				<div class="leftDiv clear">
+					<div class="leftTop">
+						<p>
+							<span> <strong>0</strong>%</span> 用时 0 分
+						</p>
+					</div>
+					<ul class="menuList">
+						<li>
+							<a href="#" class="li1List">章节</a>
+						</li>
+						<li>
+							<a href="#">评论</a>
+						</li>
+						<li>
+							<a href="#">问答</a>
+						</li>
+						<li>
+							<a href="#">笔记</a>
+						</li>
+					</ul>
+					<ul class="courseUl">
+						<li class="courseLi">
+							<a href="javascript:void(0)" onclick="method1()" class="courseTitle" id="test1">第1章 开题介绍</a>
+							<span id="span1">+</span>
+							<dl class="courseContentList" id="courseId1">
+								<dd>
+									<a href="#">1-1 activity开题介绍 (06:55) </a>
+								</dd>
+							</dl>
+						</li>
+						<li class="courseLi">
+							<a href="javascript:void(0)" onclick="method3()" id="test3" class="courseTitle">第2章 FrameWork介绍</a>
+							<span id="span3">+</span>
+							<dl class="courseContentList" id="courseId3">
+								<dd>
+									<a href="#">2-1 Framework层的类介绍-ActivityThread (08:15)</a>
+								</dd>
+								<dd>
+									<a href="#">2-2 ApplicationThread相关类介绍 (05:20)</a>
+								</dd>
+								<dd>
+									<a href="#">2-3 Context类介绍 (07:59)</a>
+								</dd>
+
+							</dl>
+						</li>
+						<li class="courseLi">
+							<a href="javascript:void(0)" onclick="method4()" id="test4" class="courseTitle">第3章 Activity生命周期分析</a>
+							<span id="span4">+</span>
+							<dl class="courseContentList" id="courseId4">
+								<dd>
+									<a href="#">3-1 Activity生命周期分析 (07:32)</a>
+								</dd>
+								<dd>
+									<a href="#">3-2 Activity生命周期分析之oncreate方法分析上 (10:37)</a>
+								</dd>
+								<dd>
+									<a href="#">3-3 Activity生命周期分析之oncreate方法分析下 (07:34)</a>
+								</dd>
+								<dd>
+									<a href="#">3-4 Activity声明周期分析之onResume分析上 (07:47)</a>
+								</dd>
+								<dd>
+									<a href="#">3-5 Activity生命周期分析之onResume分析下 (11:22) </a>
+								</dd>
+
+							</dl>
+						</li>
+						<li class="courseLi">
+							<a href="javascript:void(0)" onclick="method5()" id="test3" class="courseTitle">第4章 后记</a>
+							<span id="span5">+</span>
+							<dl class="courseContentList" id="courseId5">
+								<dd>
+									<a href="#">4-1 Activity、Window、WindowManger (03:09)</a>
+								</dd>
+								<dd>
+									<a href="#">4-2 onDestroy真的销毁了Activity吗 (11:27)</a>
+								</dd>
+							</dl>
+						</li>
+					</ul>
+				</div>
+				<!-- left结束 -->
+				<!-- right开始 -->
+				<div class="rightDiv clear">
+					<a href="#" class="aContinue">继续学习</a>
+					<span class="courseChapter">1-1 activity开题介绍</span>
+					<div class="courseGrade">
+						<h3>综合评分</h3>
+						<span>101人已评价</span>
+						<h4>9.7</h4>
+						<div class="starDiv">
+							<img src="img/star.png"/>
+						</div>
+						<p>
+							发表评价即可 +1积分
+							<a href="#">立即去评价</a>
+						</p>
+						
+					</div>
+					<!-- <div class="teacherMess">
+							<h4>讲师提示</h4>
+							<img src=""/>
+							<a href="#">远人</a>
+							<span>Web前端工程师</span>
+						</div>
+					<div class="aboutCourse">
+							<dl>
+								<dt>课程须知</dt>
+								<dd>小伙伴，在学习本课程之前，需要你熟悉HTML、CSS3和JavaScript。</dd>
+							</dl>
+							<dl>
+								<dt>老师告诉你能学到什么？</dt>
+								<dd>1、了解什么是响应式布局。</dd>
+								<dd>2、理解响应式布局的优缺点、设计原则和实现方法。</dd>
+								<dd>3、掌握使用Bootstrap前端框架实现响应式布局。</dd>
+							</dl>
+						</div>
+						<ul class="courseRelation">
+							<li></li>
+						</ul> -->
+
+				</div>
+				<!-- right结束 -->
+			</div>
+			<!-- contentWrap结束 -->
+
+		</div>
+		<!-- content结束 -->
+		<!-- footer开始 -->
+		<div class="footer">
+			<div class="foot clear">
+				<div class="footLeft clear">
+					<ul class="footList">
+						<li>
+							<a href="#">网站首页</a>
+						</li>
+						<li>
+							<a href="#">人才招聘</a>
+						</li>
+						<li>
+							<a href="#">联系我们</a>
+						</li>
+						<li>
+							<a href="#">慕课云</a>
+						</li>
+						<li>
+							<a href="#">关于我们</a>
+						</li>
+						<li>
+							<a href="#">讲师招聘</a>
+						</li>
+						<li>
+							<a href="#">意见反馈</a>
+						</li>
+						<li>
+							<a href="#">友情链接</a>
+						</li>
+					</ul>
+					<span>
+						Copyright © 2016 imooc.com All Rights Reserved | 京ICP备 13046642号-2
+					</span>
+				</div>
+				<div class="footRight">
+					<a href="#">
+						<img src="img/footImg1.png"/>
+					</a>
+					<a href="#">
+						<img src="img/footImg2.png"/>
+					</a>
+					<a href="#">
+						<img src="img/footImg3.png"/>
+					</a>
+				</div>
+			</div>
+		</div>
+		<!-- footer结束 -->
+	</div>
+	<!-- wrap -->
+	<script type="text/javascript">
+
+		function method1(){
+			var courseId1 = document.getElementById('courseId1');
+			var span1 = document.getElementById('span1');
+
+			if(courseId1.style.display == 'block'){
+				courseId1.style.display='none';
+				span1.innerHTML = "+";
+			}
+			else{
+				courseId1.style.display='block';
+				span1.innerHTML = "-";
+			}
+
+		}
+
+		function method3(){
+			var courseId3 = document.getElementById('courseId3');
+			var span3 = document.getElementById('span3');
+			if(courseId3.style.display == 'block'){
+				courseId3.style.display='none';
+				span4.innerHTML = "+";
+			}
+			else{
+				courseId3.style.display='block';
+				span4.innerHTML = "-";
+			}
+		}
+		function method4(){
+			var courseId4 = document.getElementById('courseId4');
+			var span4 = document.getElementById('span4');
+			if(courseId4.style.display == 'block'){
+				courseId4.style.display='none';
+				span4.innerHTML = "+";
+			}
+			else{
+				courseId4.style.display='block';
+				span4.innerHTML = "-";
+			}
+		}
+		function method5(){
+			var courseId5 = document.getElementById('courseId5');
+			var span5 = document.getElementById('span5');
+			if(courseId5.style.display == 'block'){
+				courseId5.style.display='none';
+				span5.innerHTML = "+";
+			}
+			else{
+				courseId5.style.display='block';
+				span5.innerHTML = "-";
+			}
+		}
+	</script>
+</body>
+</html>

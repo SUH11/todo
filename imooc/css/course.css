@@ -1,0 +1,254 @@
+/*headConten开始*/
+.headContent{
+	width: 1200px;
+	margin: 0 auto;
+}
+/*模糊效果*/
+.blur {	
+    filter: url(blur.svg#blur); /* FireFox, Chrome, Opera */
+    -webkit-filter: blur(10px); /* Chrome, Opera */
+       -moz-filter: blur(10px);
+        -ms-filter: blur(10px);    
+            filter: blur(10px);
+    filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=10, MakeShadow=false); /* IE6~IE9 */
+}
+.headBottom{
+	padding: 0!important;
+}
+.headTitle{
+	width: 100%;
+	float: left;
+}
+.headTitle p{
+	padding: 20px 0;
+}
+.headTitle p a{
+	color: #fff;
+	opacity: 0.4;
+	filter: alpha(opacity=0.4);
+}
+.headTitle p a:hover{
+	opacity: 1.0;
+	filter: alpha(opacity=100);
+}
+.headTitle h3{
+	font-size: 32px;
+	font-weight: bold;
+	color: #fff;
+}
+.headMess{
+	width: 600px;
+	float: left;
+	
+}
+.headMess ul.messCourse{
+	padding-top: 38px;
+}
+.headMess ul.messCourse li{
+	float: left;
+	padding: 10px 120px 20px 20px;
+	color: #fff;
+	text-align: left;
+	border-left: 1px solid #51504f;
+	opacity: 0.4;
+	filter: alpha(opcity=40);
+}
+
+.headMess ul.messCourse li b{
+	display: block;
+	font-size: 18px;
+}
+ul.messCourse li span{
+	line-height: 28px;
+}
+.headShare{
+	float: right;
+}
+.headShare span{
+	display: inline-block;
+}
+.headShare ul.share{
+
+}
+.headShare ul.share li{
+	float: left;
+	color: #fff;
+	opacity: 0.7;
+	filter: alpha(opacity=40);
+	padding-left: 16px;
+	margin-top: 80px;
+}
+ul.share li a{
+	color: #fff;
+}
+/*headContent结束*/
+
+/*content开始*/
+.content{
+	/* width: 100%!important;
+	height: auto!important; */
+}
+.content .contentWrap{
+	width: 1200px;
+	float: left;
+}
+/*left开始*/
+.leftDiv{
+	width: 880px!important;
+	float: left;
+	margin-right: 80px;
+	margin-bottom: 300px;
+}
+.leftTop,.menuList,.courseUl{
+	width: 100%;
+	/*height: 200px;*/
+	/*background-color: #ccc;*/
+	float: left;
+}
+.leftTop p{
+	/*background: green;*/
+	padding: 10px 0 15px 0;
+	font-size: 14px;
+	background: url(../img/leftTopPBg.jpg) no-repeat left bottom;
+}
+.leftTop p span{
+	color: rgb(240, 20, 0);
+	padding-right: 10px;
+}
+.leftTop p span strong{
+	font-size: 30px;
+	font-weight: 400;
+
+}
+.leftDiv ul.menuList{
+	padding-top: 50px;
+	border-bottom: 1px solid #edf1f2;
+}
+.leftDiv ul.menuList li{
+	float: left;
+}
+.leftDiv ul.menuList li a{
+	display: block;
+	padding: 22px 45px;
+	font-size: 16px;
+	line-height: 14px;
+	height: 14px;
+	color: rgb(20, 25, 30);
+}
+ul.menuList li a:hover{
+	color: rgb(240, 20, 0);
+}
+ul.menuList li a.li1List{
+	color: rgb(240, 20, 0);
+	border-bottom: 2px solid rgb(240, 20, 0);
+}
+.leftDiv ul.courseUl li{
+	width: 100%;
+	padding: 10px 0;
+	font-size: 14px;
+	font-weight: bold;
+	border-bottom: 1px solid #edf1f2;
+	cursor: pointer;
+	position: relative;
+}
+.leftDiv ul.courseUl li a:hover{
+	background-color: #edf1f2;
+}
+ul.courseUl li a.courseTitle{
+	color: rgb(20, 25, 30);
+	display: block;
+	text-indent: 50px;
+	padding: 13px 0;
+	background: url(../img/courseIcon.png) no-repeat 15px 12px;
+	
+}
+ul.courseUl li span{
+	position: absolute;
+	right: 20px;
+	top: 15px;
+	font-weight: 100;
+	font-size: 25px;
+	color: #787D82;
+}
+dl.courseContentList dd{
+	width: 100%;
+}
+dl.courseContentList{
+	display: none;
+}
+dl.courseContentList dd a{
+	width: 100%;
+	display: block;
+	font-size: 14px;
+	color: #787d82;
+	font-weight: 100;
+	padding: 13px 0 13px 62px;
+	background: url(../img/courseIcon2.png) no-repeat 40px 20px;
+}
+/*left结束*/
+/*right开始*/
+.rightDiv{
+	width: 240px;
+	/*background-color: green;*/
+	float: left;
+
+}
+.rightDiv a.aContinue{
+	display: block;
+	width: 240px;
+	height: 62px;
+	line-height: 62px;
+	text-align: center;
+	background-color: #f01400;
+	font-size: 18px;
+	color: #fff;
+	float: left;
+}
+.rightDiv span.courseChapter{
+	float: left;
+	width: 100%;
+	text-align: center;
+	font-size: 12px;
+	padding: 5px;
+	color: #787D82;
+}
+.rightDiv .courseGrade{
+	width: 198px;
+	padding: 20px;
+	border: 1px solid #d0d6d9;
+	margin-top: 10px;
+	float: left;
+	position: relative;
+}
+.rightDiv .courseGrade h3{
+	font-size: 14px;
+	color: #787d82;
+	line-height: 16px;
+	font-weight: 400;
+}
+.rightDiv .courseGrade h4{
+	font-size: 30px;
+	color: #787d82;
+	font-weight: 400;
+	line-height: 50px;
+}
+.starDiv{
+	padding: 16px 0;
+	border-bottom: 1px solid #d0d6d9;
+}
+.courseGrade span{
+	position: absolute;
+	top: 20px;
+	right: 15px;
+	color: #b5b9bc;
+}
+.courseGrade p{
+	padding: 20px 0 10px 0;
+	color: #ff9900;
+}
+.courseGrade p a{
+	color: #14191e;
+	padding-left: 10px;
+}
+/*right结束*/
+/*content结束*/
