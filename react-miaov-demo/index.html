@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<script src="js/babel.min.js"></script>
+	<script src="js/react.development.js"></script>
+	<script src="js/react-dom.development.js"></script>
+	<script src="js/data.js"></script>
+	<style>
+		.panel {
+            border: 1px solid #000;
+            width: 80%;
+        }
+        .title {
+            margin: 0;
+            padding: 10px;
+            background: #ccc;
+        }
+        p.vip {
+            color: red;
+        }
+        p.message {
+            color: #aaa;
+        }
+	</style>
+</head>
+<body>	
+	<div id="app"></div>
+	<script type="text/babel">
+		class List extends React.Component {
+			render() {
+				return (
+					<ul>
+						{this.props.list.map(function(val, index) {
+							return (
+								<li key={index}>
+									<p className="vip">{val.useranme}</p>
+									<p className="message">{val.message}</p>
+								</li>
+							)
+						})}
+					</ul>
+				);
+			}
+		}
+		class Item extends React.Component {
+			constructor() {
+				super(...arguments);
+				this.state = {
+					showList: [true, false, false]
+				}
+			}
+			changeList() {
+				this.setState({
+					show: !this.state.show
+				});
+			}
+			render() {
+				return (
+					<div>
+						<h2 className="title" onClick={this.changeList.bind(this)}>{this.props.data.name}</h2>
+						{this.state.show ? <List list={this.props.data.list}/>:""}
+					</div>
+				);
+			}
+		}
+		class Penel extends React.Component {
+			constructor() {
+				super(...arguments);
+			}
+			setShow() {
+				var list = Object.keys(dataList).map((val,index) =>{
+            		return <Item data={dataList[val]} key={index} />
+                });
+                return list;
+			}
+			render() {
+				return (
+					<div className="panel">
+						{this.setShow()}
+					</div>
+				);
+			}
+		}
+		
+		ReactDOM.render(
+			<Penel />,
+			document.getElementById('app')
+		);
+	</script>
+</body>
+</html>
