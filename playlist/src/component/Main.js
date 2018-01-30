@@ -1,9 +1,14 @@
 import React from 'react';
+import Item from './Item';
 
 export default class Main extends React.Component {
+    constructor() {
+        super(...arguments);
+    }
     render() {
+        let data = this.props.data;
         return (
-            <table class="main">
+            <table className="main">
                 <thead>
                     <tr>
                         <th>
@@ -17,45 +22,9 @@ export default class Main extends React.Component {
                     </tr>
                 </thead>
                 <tbody>
-                <tr className="like">
-                    <td>
-                        <input type="checkbox" name=""/>
-                    </td>
-                    <td>空白格</td>
-                    <td>蔡健雅</td>
-                    <td>
-                        <input type="checkbox" checked name=""/>
-                    </td>
-                    <td>
-                        <a>X</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <input type="checkbox" name=""/>
-                    </td>
-                    <td>全世界失眠</td>
-                    <td>陈奕迅</td>
-                    <td>
-                        <input type="checkbox" name=""/>
-                    </td>
-                    <td>
-                        <a>X</a>
-                    </td>
-                </tr>
-                <tr className="selected">
-                    <td>
-                        <input type="checkbox" checked name=""/>
-                    </td>
-                    <td>全世界失眠</td>
-                    <td>陈奕迅</td>
-                    <td>
-                        <input type="checkbox" name=""/>
-                    </td>
-                    <td>
-                        <a>X</a>
-                    </td>
-                </tr>
+                { data.map(val => {
+                    return <Item data={val} key={val.id} />;
+                })}
                 </tbody>
             </table>
         );
