@@ -50,8 +50,24 @@
 				this.state = {
 					showList: [true, false, false]
 				}
+				this.changeList = this.changeList.bind(this);
 			}
-			changeList() {
+			shouldComponentUpdate(nextProps, nextState) {
+				if ( this.state.show != nextProps.show ) {
+					this.setState({
+						show: nextProps.show
+					});
+				}
+				return true;
+			}
+			changeList(i) {
+				console.log(i);
+				let showList = this.state.showList.map(function(val, index) {
+					if ( i === index ) {
+						return true;
+					}
+					return false;
+				});
 				this.setState({
 					show: !this.state.show
 				});
@@ -71,7 +87,7 @@
 			}
 			setShow() {
 				var list = Object.keys(dataList).map((val,index) =>{
-            		return <Item data={dataList[val]} key={index} />
+            		return <Item data={dataList[val]} key={index} show={this.state.showList[index]} onChange={this.changeList} index={index}/>
                 });
                 return list;
 			}
