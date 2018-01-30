@@ -23,71 +23,151 @@
         p.message {
             color: #aaa;
         }
+		.listWrap {
+			height: 0;
+			overflow: hidden;
+			transition: .5s;
+		}
 	</style>
 </head>
 <body>	
 	<div id="app"></div>
 	<script type="text/babel">
-		class List extends React.Component {
-			render() {
-				return (
-					<ul>
-						{this.props.list.map(function(val, index) {
-							return (
+        class List extends React.Component {
+            render(){
+                return (<ul>
+                    {this.props.list.map(function(val,index){
+                        return (
 								<li key={index}>
-									<p className="vip">{val.useranme}</p>
+									<p className="vip">{val.username}</p>
 									<p className="message">{val.message}</p>
 								</li>
-							)
-						})}
-					</ul>
-				);
-			}
-		}
-		class Item extends React.Component {
-			constructor() {
-				super(...arguments);
-				this.state = {
-					showList: [true, false, false]
-				}
-			}
-			changeList() {
-				this.setState({
-					show: !this.state.show
-				});
-			}
-			render() {
-				return (
-					<div>
-						<h2 className="title" onClick={this.changeList.bind(this)}>{this.props.data.name}</h2>
-						{this.state.show ? <List list={this.props.data.list}/>:""}
+                        )
+                    })}
+				</ul>);
+            }
+        }
+        class Item extends React.Component {
+            constructor(){
+                super(...arguments);
+                this.state = {
+                    show: this.props.show
+                };
+            }
+            showList(show){
+                var list = this.refs.list;
+                if(show){
+                    list.style.height = list.scrollHeight + "px";
+                } else {
+                    list.style.height = 0;
+                }
+            }
+            componentDidMount(){
+                console.log(this.refs);
+                this.showList(this.state.show);
+            }
+            shouldComponentUpdate(nextProps,nextState){
+                if(this.state.show !=  nextProps.show){
+                    this.setState({
+                        show: nextProps.show
+                    });
+                }
+                if(this.state.show != nextState.show){
+                    this.showList(nextState.show);
+                }
+                return false;
+            }
+            changeList(){
+                let show = !this.state.show;
+                this.setState({
+                    show
+                });
+                if(show){
+                    //console.log("操作其他列表隐藏");
+                    //console.log(this.props.onChange);
+                    this.props.onChange(this.props.index);
+                }
+                /*
+                * 1. 隐藏当前不需要改变其他列表的状态
+                * 2. 展开当前，隐藏其他项状态
+                * */
+            }
+            render(){
+                console.log(this.state.show);
+                return (<div>
+					<h2 className="title" onClick={this.changeList.bind(this)}>{this.props.data.name}</h2>
+					<div className="listWrap" ref="list">
+						<List list={this.props.data.list}/>
 					</div>
-				);
-			}
-		}
-		class Penel extends React.Component {
-			constructor() {
-				super(...arguments);
-			}
-			setShow() {
-				var list = Object.keys(dataList).map((val,index) =>{
-            		return <Item data={dataList[val]} key={index} />
+				</div>);
+            }
+        }
+        class Penel extends React.Component {
+            constructor(){
+                super(...arguments);
+                this.state = {
+                    showList:[true,false,false]
+                }
+                this.changeList = this.changeList.bind(this);
+            }
+            changeList(i){
+                // 需要让当前第几个显示
+                console.log(i);
+                let showList = this.state.showList.map(function(val,index){
+                    if(i == index){
+                        return true;
+                    }
+                    return false;
+                });
+                console.log(showList);
+                this.setState({
+                    showList
+                });
+            }
+            setShow(){
+                var list = Object.keys(dataList).map((val,index) =>{
+                    return (
+							<Item
+									data={dataList[val]}
+									key={index}
+									show={this.state.showList[index]}
+									onChange={this.changeList}
+									index = {index}
+							/>)
                 });
                 return list;
-			}
-			render() {
-				return (
-					<div className="panel">
-						{this.setShow()}
-					</div>
-				);
-			}
-		}
+            }
+            render(){
+                return  (
+						<div className="panel">
+                            {this.setShow()}
+						</div>
+                );
+            }
+        }
 		
 		ReactDOM.render(
 			<Penel />,
 			document.getElementById('app')
 		);
+		/*
+		* 	1 挂载阶段
+		* 		constructor()
+		* 		componentWillMount
+		* 		render()
+		* 		componentDidMount
+		* 	2 卸载阶段
+		* 		componentWillUnMount	即将卸载（没有卸载完成）
+		*
+		* 	3 更新阶段
+		* 		componentWillReceiveProps(nextProps)
+		* 		shouldComponentUpdate(nextProps, nextState)	是否需要重新渲染 return false/true
+		* 		componentWillUpdate(nextProps, nextState)	即将更新
+		* 		render()
+		* 		componentDidUpdate(prevProps, prevState)	完成更新
+		*
+		*
+		* **/
 	</script>
 </body>
 </html>
