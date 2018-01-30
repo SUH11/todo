@@ -1,16 +1,16 @@
-## `git clone`
+## 1. `git clone`
 
 clone this project, and then install packages.
 
-## `cd react-api-demo`
+## 2. `cd react-api-demo`
 
 enter this project
 
-## `npm install`
+## 3. `npm install`
 
 In the project directory, you can run:
 
-### `npm start`
+### 4. `npm start`
 
 Runs the app in the development mode.<br>
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
@@ -25,3 +25,4 @@ See the section about [running tests](#running-tests) for more information.
 
 ### `npm run build`
 
+the origin website is https://doc.react-china.org/docs/lists-and-keys.html, it is react api (Chinese)
