@@ -14,6 +14,11 @@ import NameForm from './component/NameForm';
 import EssayForm from './component/EssayForm';
 import FlavorForm from './component/FlavorForm';
 import Reservation from './component/Reservation';
+import Calculator from './component/Calculator';
+import WelcomeDialog from './component/WelcomeDialog';
+import FilterableProductTable from './component/FilterableProductTable';
+import { SplitPane, Contacts, Chat } from './component/SplitPane';
+import { MessageDialog, SignUpDialog } from './component/Dialog';
 
 const element = <span tabIndex="0">Hello, element!</span>;
 
@@ -38,7 +43,14 @@ const element = <span tabIndex="0">Hello, element!</span>;
 //     children: 'Hello Props'
 //   }
 // };
-
+const PRODUCTS = [
+  {category: 'Sporting Goods', price: '$49.99', stocked: true, name: 'Football'},
+  {category: 'Sporting Goods', price: '$9.99', stocked: true, name: 'Baseball'},
+  {category: 'Sporting Goods', price: '$29.99', stocked: false, name: 'Basketball'},
+  {category: 'Electronics', price: '$99.99', stocked: true, name: 'iPod Touch'},
+  {category: 'Electronics', price: '$399.99', stocked: false, name: 'iPhone 5'},
+  {category: 'Electronics', price: '$199.99', stocked: true, name: 'Nexus 7'}
+];
 class App extends Component {
 
   render() {
@@ -59,7 +71,13 @@ class App extends Component {
     return (
       <div className="App">
         <NumberList numbers={number} />
+        <FilterableProductTable products={PRODUCTS}/>
+        <MessageDialog />
+        <SignUpDialog />
+        <SplitPane left={<Contacts />} right={<Chat />} />
+        <WelcomeDialog />
         <Reservation />
+        <Calculator />
         <FlavorForm />
         <EssayForm />
         <NameForm />
