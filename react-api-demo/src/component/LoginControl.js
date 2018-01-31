@@ -10,15 +10,15 @@ export default class LoginControl extends React.Component {
   }
 
   handleLogoutClick= () => {
-    this.state = {
+    this.setState({
       isLoggedIn: false
-    }
+    });
   };
 
   handleLoginClick = () => {
-    this.state = {
+    this.setState({
       isLoggedIn: true
-    }
+    });
   };
 
   render() {

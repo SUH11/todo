@@ -8,7 +8,12 @@ import Greeting from './component/Greeting';
 import LoginControl from './component/LoginControl';
 import Mailbox from './component/Mailbox';
 import Warn from './component/Warn';
-import NumberList from './component/NumberList';
+import {NumberList} from './component/NumberList';
+import Blog from './component/Blog';
+import NameForm from './component/NameForm';
+import EssayForm from './component/EssayForm';
+import FlavorForm from './component/FlavorForm';
+import Reservation from './component/Reservation';
 
 const element = <span tabIndex="0">Hello, element!</span>;
 
@@ -46,9 +51,19 @@ class App extends Component {
       <li key={index}>{number}</li>
     );
 
+    const posts = [
+      {id: 1, title: 'Hello huangsuhong', content: 'Welcome to learning React!'},
+      {id: 2, title: 'Installation', content: 'You can install React from npm.'}
+    ];
+
     return (
       <div className="App">
         <NumberList numbers={number} />
+        <Reservation />
+        <FlavorForm />
+        <EssayForm />
+        <NameForm />
+        <Blog posts={posts} />
         <ul>{listItem}</ul>
         <p>Hello React !</p>
         <p>{element}</p>
