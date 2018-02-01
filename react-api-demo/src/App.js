@@ -16,7 +16,10 @@ import FlavorForm from './component/FlavorForm';
 import Reservation from './component/Reservation';
 import Calculator from './component/Calculator';
 import WelcomeDialog from './component/WelcomeDialog';
+import TodoList from './component/TodoList';
 import FilterableProductTable from './component/FilterableProductTable';
+import CustomTextInput from './component/CustomTextInput';
+import WordAdder from './component/WordAdder';
 import { SplitPane, Contacts, Chat } from './component/SplitPane';
 import { MessageDialog, SignUpDialog } from './component/Dialog';
 
@@ -72,6 +75,9 @@ class App extends Component {
       <div className="App">
         <NumberList numbers={number} />
         <FilterableProductTable products={PRODUCTS}/>
+        <WordAdder />
+        <TodoList />
+        <CustomTextInput />
         <MessageDialog />
         <SignUpDialog />
         <SplitPane left={<Contacts />} right={<Chat />} />
