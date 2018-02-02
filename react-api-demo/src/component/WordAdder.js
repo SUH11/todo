@@ -12,7 +12,8 @@ export default class WordAdder extends React.Component {
     const words = this.state.words;
     words.push('worker');
     this.setState(prevState => ({
-      words: prevState.words.concat(['marklar'])
+      // words: prevState.words.concat(['marklar'])
+      words: [...prevState.words, 'marklar']
     }));
   }
   render() {
@@ -27,6 +28,11 @@ export default class WordAdder extends React.Component {
 // Pure 比对是否一样，浅更新
 class ListOfWords extends React.PureComponent {
   render() {
-    return <div>{this.props.words.join(',')}</div>;
+    return <div>{this.props.words.join(',')} </div>;
   }
 }
+//
+// function updateColorMap(colorMap) {
+//   return Object.assign({}, colorMap, {right: 'blue'});
+//   // return {...colorMap, right: 'blue'};
+// }

@@ -20,6 +20,7 @@ import TodoList from './component/TodoList';
 import FilterableProductTable from './component/FilterableProductTable';
 import CustomTextInput from './component/CustomTextInput';
 import WordAdder from './component/WordAdder';
+import './component/NoUseES6Mixin';
 import { SplitPane, Contacts, Chat } from './component/SplitPane';
 import { MessageDialog, SignUpDialog } from './component/Dialog';
 
