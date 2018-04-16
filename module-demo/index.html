@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+		var myNamespace = (function() {
+			var myPrivateVar = 0;
+
+			var myPrivateMethod = function(foo) {
+				console.log(foo);
+			};
+
+			return {
+				myPublicVar : 'foo',
+
+				myPublicFunction: function(bar) {
+
+					myPrivateVar ++;
+					myPrivateMthod(bar);
+				}
+				
+			};
+		})();
+
+	</script>
+</head>
+<body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
